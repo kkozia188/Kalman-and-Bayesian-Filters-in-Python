@@ -1,5 +1,7 @@
 # [Kalman and Bayesian Filters in Python](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 
+本 fork 的中文学习路线、进度和实验笔记：[学习入口](study/README.md)。
+
 
 Introductory text for Kalman and Bayesian filters. All code is written in Python, and the book itself is written using Jupyter Notebook so that you can run and modify the code in your browser. What better way to learn?
 
