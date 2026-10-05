@@ -1,0 +1,14 @@
+# 本书使用的学习环境；通过 uv pip compile 生成精确版本锁文件。
+# NumPy 1.x 和 IPython 8.x 用于兼容原书的旧 API。
+jupyterlab>=4,<5
+ipykernel>=6,<7
+ipython>=8,<9
+ipywidgets>=8,<9
+nbclient>=0.10,<0.11
+nbformat>=5,<6
+filterpy==1.4.5
+numpy>=1.26,<2
+scipy>=1.11,<2
+matplotlib>=3.8,<4
+sympy>=1.12,<2
+setuptools>=70

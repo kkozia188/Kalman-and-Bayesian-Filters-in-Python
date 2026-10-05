@@ -35,4 +35,40 @@
 - [原书目录](../table_of_contents.ipynb)
 - [原书运行与安装说明](../README.md#downloading-and-running-the-book)
 
-运行环境尚未配置。开始执行 Notebook 前，先建立独立的 Python 环境并检查依赖。
+## 在 JupyterLab 中学习
+
+使用独立的 `.venv` 环境。依赖的精确版本保存在 [requirements.lock](requirements.lock) 中；依赖选择保存在 [requirements.in](requirements.in) 中。
+
+首次安装或重建环境（需要 Python 3.10 和 `uv`）：
+
+```bash
+cd ~/Kalman-and-Bayesian-Filters-in-Python
+uv venv --python python3.10 .venv
+uv pip sync study/requirements.lock --python .venv/bin/python
+.venv/bin/python -m ipykernel install --prefix "$PWD/.venv" --name python3 --display-name 'Python (Kalman Study)'
+```
+
+启动：
+
+```bash
+./study/start-lab.sh
+```
+
+打开终端输出的带 token 的链接。服务默认使用本机端口 `8888`，打开后进入第一章。若端口已被占用，可使用 `KALMAN_JUPYTER_PORT=8889 ./study/start-lab.sh`。
+
+在 WSL 中运行时，可以从 Windows 浏览器打开 `localhost` 链接。
+
+Notebook 右上角的内核应为 **Python (Kalman Study)**。选中代码单元后按 **Shift+Enter**，执行代码并移动到下一格。建议按原书顺序执行；重新开始实验时，使用 **Kernel → Restart Kernel and Clear Outputs of All Cells**。
+
+左侧文件列表可以打开 `study/notes/01-g-h-filter.md`，用于记录自己的解释和实验结果。修改实验代码前，可以用 **File → Save Notebook As** 将副本保存到仓库根目录，命名为 `01-g-h-filter-practice.ipynb`。放在根目录可以直接使用原书的绘图模块和样式文件。
+
+环境验证：第一章的 52 个代码单元已通过完整执行，包括绘图和交互控件代码。验证输出保存在本地 `study/.runtime/`，不提交到 Git。其他章节将在学习时逐章验证。
+
+如果使用当前机器上已配置的后台服务，可用下面的命令管理：
+
+```bash
+systemctl --user status kalman-study-jupyter
+systemctl --user stop kalman-study-jupyter
+```
+
+该后台服务不会在重启机器后自动启动。重启后可以用 `./study/start-lab.sh` 在终端启动。
