@@ -13,5 +13,5 @@ exec "$study_root/.venv/bin/jupyter" lab \
     --port="${KALMAN_JUPYTER_PORT:-8888}" \
     --port-retries=0 \
     --ServerApp.root_dir="$study_root" \
-    --ServerApp.default_url=/lab/tree/01-g-h-filter.ipynb \
+    --ServerApp.default_url=/lab/tree/01-g-h-filter.zh-CN.ipynb \
     "$@"

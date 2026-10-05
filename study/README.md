@@ -30,7 +30,8 @@
 
 ## 学习入口
 
-- [第 1 章原文](../01-g-h-filter.ipynb)
+- [第 1 章中文交互学习版](../01-g-h-filter.zh-CN.ipynb)：来自 [carl-3070 社区译本](https://github.com/carl-3070/Kalman-and-Bayesian-Filters-in-Python-zh_cn)，来源版本和作者署名见 Notebook 首格，部分文字仍为英文。
+- [第 1 章英文原文](../01-g-h-filter.ipynb)
 - [第 1 章笔记与实验记录](notes/01-g-h-filter.md)
 - [原书目录](../table_of_contents.ipynb)
 - [原书运行与安装说明](../README.md#downloading-and-running-the-book)
@@ -54,7 +55,9 @@ uv pip sync study/requirements.lock --python .venv/bin/python
 ./study/start-lab.sh
 ```
 
-打开终端输出的带 token 的链接。服务默认使用本机端口 `8888`，打开后进入第一章。若端口已被占用，可使用 `KALMAN_JUPYTER_PORT=8889 ./study/start-lab.sh`。
+打开终端输出的带 token 的链接。服务默认使用本机端口 `8888`，打开后进入中文第一章。若端口已被占用，可使用 `KALMAN_JUPYTER_PORT=8889 ./study/start-lab.sh`。
+
+中文网页是静态阅读版，不能执行代码。需要修改参数、运行代码时，请打开 JupyterLab 内的 `01-g-h-filter.zh-CN.ipynb`。
 
 在 WSL 中运行时，可以从 Windows 浏览器打开 `localhost` 链接。
 
@@ -62,7 +65,7 @@ Notebook 右上角的内核应为 **Python (Kalman Study)**。选中代码单元
 
 左侧文件列表可以打开 `study/notes/01-g-h-filter.md`，用于记录自己的解释和实验结果。修改实验代码前，可以用 **File → Save Notebook As** 将副本保存到仓库根目录，命名为 `01-g-h-filter-practice.ipynb`。放在根目录可以直接使用原书的绘图模块和样式文件。
 
-环境验证：第一章的 52 个代码单元已通过完整执行，包括绘图和交互控件代码。验证输出保存在本地 `study/.runtime/`，不提交到 Git。其他章节将在学习时逐章验证。
+环境验证：英文第一章和中文第一章各自的 52 个代码单元均已通过完整执行，包括绘图和交互控件代码。验证输出保存在本地 `study/.runtime/`，不提交到 Git。其他章节将在学习时逐章验证。
 
 如果使用当前机器上已配置的后台服务，可用下面的命令管理：
 
