@@ -1,0 +1,24 @@
+[Unit]
+Description=Kalman study JupyterLab
+After=network.target
+
+[Service]
+Type=simple
+User=kalman-study
+Group=kalman-study
+WorkingDirectory=/opt/kalman-study
+Environment=HOME=/var/lib/kalman-study
+Environment=JUPYTER_CONFIG_DIR=/var/lib/kalman-study/.jupyter
+Environment=MPLCONFIGDIR=/var/lib/kalman-study/matplotlib
+ExecStart=/opt/kalman-study/.venv/bin/jupyter lab --config=/etc/kalman-study/jupyter_server_config.py
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/kalman-study /var/lib/kalman-study
+
+[Install]
+WantedBy=multi-user.target

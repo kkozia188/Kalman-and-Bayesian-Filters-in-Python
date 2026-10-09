@@ -30,6 +30,8 @@
 
 ## 学习入口
 
+云端固定入口：[https://kkozia.top/kalman/](https://kkozia.top/kalman/)。云端支持阅读、修改代码和运行，服务器自动启动服务。首次访问使用部署时提供的登录信息。操作与管理见 [云端说明](cloud/README.md)。本地和云端分别保存修改，没有自动同步。
+
 - [第 1 章中文交互学习版](../01-g-h-filter.zh-CN.ipynb)：来自 [carl-3070 社区译本](https://github.com/carl-3070/Kalman-and-Bayesian-Filters-in-Python-zh_cn)，来源版本和作者署名见 Notebook 首格，部分文字仍为英文。
 - [第 1 章英文原文](../01-g-h-filter.ipynb)
 - [第 1 章笔记与实验记录](notes/01-g-h-filter.md)
